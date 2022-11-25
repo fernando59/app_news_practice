@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/navigation_model.dart';
+import 'package:news_app/pages/tab1_screen.dart';
+import 'package:news_app/pages/tab2_screen.dart';
 import 'package:provider/provider.dart';
 
 class TabScreen extends StatelessWidget {
@@ -45,15 +47,13 @@ class _Pages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final navigationModel = Provider.of<NavigationModel>(context);
     return PageView(
+      controller: navigationModel.pageController,
       physics: const NeverScrollableScrollPhysics(),
       children: <Widget>[
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.green,
-        )
+        Tab1Screen(),
+        const Tab2Screen(),
       ],
     );
   }
