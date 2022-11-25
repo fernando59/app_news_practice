@@ -4,7 +4,7 @@ import 'package:news_app/models/category_model.dart';
 import 'package:news_app/models/news_models.dart';
 import 'package:http/http.dart' as http;
 
-const _apiKey = '9ccdf664076642bb98de4d846c04afe9';
+const _apiKey = '';
 
 class NewsService with ChangeNotifier {
   List<Article> headlines = [];
