@@ -114,7 +114,7 @@ class _CardImage extends StatelessWidget {
             ? FadeInImage(
                 placeholder: const AssetImage('assets/img/giphy.gif'),
                 image: NetworkImage(article.urlToImage!))
-            : const Image(image: AssetImage('asset/img/no-image.png')),
+            : const Image(image: AssetImage('assets/img/no-image.png')),
       ),
     );
   }
